@@ -152,12 +152,19 @@ section{position:relative;}
 .cube-stage{
   width:150px;height:150px;position:relative;
   transform-style:preserve-3d;
-  animation:spin 16s linear infinite;
+  cursor:grab;
+  touch-action:none;
+  transform:rotateX(-18deg) rotateY(0deg);
 }
-@keyframes spin{
-  from{transform:rotateX(-18deg) rotateY(0deg);}
-  to{transform:rotateX(-18deg) rotateY(360deg);}
+.cube-stage.dragging{cursor:grabbing;}
+.hero-visual{touch-action:none;}
+.hero-visual-hint{
+  margin-top:14px;text-align:center;
+  font-family:var(--mono);font-size:11px;color:var(--text-faint);
+  letter-spacing:0.04em;
+  opacity:0;transition:opacity .3s;
 }
+.hero-visual:hover .hero-visual-hint{opacity:1;}
 .cube-face{
   position:absolute;width:150px;height:150px;
   border:1px solid rgba(94,234,212,0.4);

@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="brutalist.css">
+<link rel="stylesheet" href="variant-nav.css">
 </head>
 <body>
 
@@ -79,30 +80,35 @@
       <a class="section-link" href="https://wiscot.xyz" target="_blank" rel="noopener">wiscot.xyz</a>
     </div>
 
-    <p class="lede">Wiscot — a social platform with its own wallet, chat, and 3D games arcade</p>
-    <p class="body-text">Wiscot is a full platform built from scratch: a "Cot Bank" wallet and mining/rewards system, referrals, real-time chat, leaderboards, OAuth login via Discord and GitHub, transactional email, and a PWA shell that installs like a native app. Shipped to both web and Android (wrapped with Capacitor).</p>
+    <p class="lede">Wiscot — a real-time social platform with its own wallet, WebRTC calls, and a 3D games arcade</p>
+    <p class="body-text">Wiscot is a full platform built on Django: a "Cot Bank" wallet backed by real Flutterwave payments, real-time chat and eight multiplayer games running over WebSockets (Django Channels + Redis), WebRTC voice/video calls through a self-hosted TURN server, leaderboards, referrals, and OAuth login via Discord, GitHub, Twitter, and TikTok. Shipped to both web and Android (wrapped with Capacitor).</p>
 
     <div class="tag-list">
-      <span class="tag">Node.js</span>
+      <span class="tag">Django / DRF</span>
+      <span class="tag">Channels / WebSockets</span>
+      <span class="tag">PostgreSQL + Redis</span>
       <span class="tag">Three.js / WebGL</span>
-      <span class="tag">PHP</span>
-      <span class="tag">PWA</span>
-      <span class="tag">Discord &amp; GitHub OAuth</span>
+      <span class="tag">WebRTC</span>
+      <span class="tag">PHP (auth layer)</span>
       <span class="tag">Capacitor / Android</span>
     </div>
 
     <div class="feature-grid">
       <div class="feature-card feature-card--lime">
-        <h3>3D GAMES ARCADE</h3>
-        <p>A three.js-powered 3D lobby leading into eight built-in games — chess, checkers, dash, maze runner, quiz, shadow boxing, drop zone, eight ball.</p>
+        <h3>REAL-TIME OVER WEBSOCKETS</h3>
+        <p>Django Channels + Redis power live chat, presence, and eight real-time multiplayer games, with Gunicorn and Daphne behind Nginx handling HTTP and WebSocket traffic side by side.</p>
       </div>
       <div class="feature-card feature-card--pink">
-        <h3>COT BANK &amp; REWARDS</h3>
-        <p>A wallet system with mining-style earning, a leaderboard, referral rewards, and account comparison — the platform's core engagement loop.</p>
+        <h3>3D GAMES ARCADE + AN AI OPPONENT</h3>
+        <p>A three.js-powered 3D lobby leading into chess, checkers, dash, maze runner, quiz, shadow boxing, drop zone, and eight ball — plus a bot opponent ("COTY AI") for solo practice matches.</p>
       </div>
       <div class="feature-card">
-        <h3>REAL PRODUCT INFRASTRUCTURE</h3>
-        <p>Transactional email (security alerts, payouts, referrals), OTP verification, a service worker for offline/installable use, and its own deploy pipeline.</p>
+        <h3>WEBRTC VOICE &amp; VIDEO CALLS</h3>
+        <p>In-chat calling runs over a self-hosted Coturn TURN server, signaled through the same Channels/Redis layer as the rest of the platform's real-time features.</p>
+      </div>
+      <div class="feature-card feature-card--lime">
+        <h3>COT BANK, BACKED BY REAL PAYMENTS</h3>
+        <p>A wallet system with Flutterwave-powered multi-currency deposits, mining-style earning, a leaderboard, and referral rewards, with automated NSFW moderation (NudeNet + OpenCV) on user-generated content.</p>
       </div>
     </div>
 
@@ -128,6 +134,7 @@
       <div class="product-block__head">
         <h3>RENTNEST</h3>
         <span class="status-chip status-chip--dev">IN DEVELOPMENT</span>
+        <span class="disclaimer-stamp">INDEPENDENT, NIGERIA-FOCUSED — UNRELATED TO THE UK COMPANY OF THE SAME NAME</span>
       </div>
       <p class="body-text">A property rental app for the Nigerian market — verified listings across Lekki, Victoria Island, Ikoyi and more, map-based search, in-app landlord chat, inspection scheduling, digital rental applications, and lease preview. Full onboarding, search, application, and messaging flow designed as a real product, not a demo.</p>
       <div class="tag-list">
@@ -152,10 +159,10 @@
         <h3>STUDYPATH</h3>
         <span class="status-chip status-chip--live">LIVE ↗</span>
       </div>
-      <p class="body-text">A gamified study platform built for university coursework: XP points, day streaks, and a Duolingo-style chapter progression map. Course material is processed through a data-extraction pipeline into structured chapters and practice questions, so students move through a real syllabus instead of a flat PDF.</p>
+      <p class="body-text">A gamified study platform built for university coursework: XP points, day streaks, and a Duolingo-style chapter progression map. A Python script parses course slide decks (.pptx) into structured chapters and practice questions, so students move through a real syllabus instead of a flat slide deck.</p>
       <div class="tag-list">
         <span class="tag">JavaScript</span>
-        <span class="tag">Data extraction pipeline</span>
+        <span class="tag">Python (.pptx parsing)</span>
         <span class="tag">Gamified UX</span>
       </div>
       <a class="section-link" href="https://bu-study-path.netlify.app" target="_blank" rel="noopener">bu-study-path.netlify.app</a>
@@ -187,12 +194,13 @@
   <section id="client-work" class="section section--dark">
     <div class="section-head">
       <span class="section-num">03</span>
-      <h2 class="section-title">CLIENT WORK</h2>
-      <span class="nda-stamp">CLIENT: REDACTED — NDA</span>
+      <h2 class="section-title">FREELANCE: GALA FPL CHALLENGE</h2>
     </div>
+    <p class="body-text body-text--light">Built and shipped for Gala, the Nigerian snack brand — a real-money fantasy football leaderboard, live at <a class="section-link" href="https://gala-fpl.com.ng" target="_blank" rel="noopener">gala-fpl.com.ng</a>.</p>
 
+    <a class="live-stamp" href="https://gala-fpl.com.ng" target="_blank" rel="noopener">● LIVE — GALA-FPL.COM.NG</a>
     <p class="lede lede--light">Season-long fantasy football leaderboard, ~1,000 entrants, real cash prizes</p>
-    <p class="body-text body-text--light">Commissioned to build a tournament platform for a branded Fantasy Premier League challenge: automated overall, weekly, and monthly leaderboards computed live from the public FPL API, with real cash prizes attached to the standings — so correctness and freshness weren't optional. Originally built on Node.js and deployed to Render; later rebuilt in PHP 8.1 to run on the client's existing cPanel shared hosting, which had no Node support. Backed by MySQL, with Google OAuth accounts, encrypted bank-detail storage for payouts, Web Push notifications, and cron-driven automation for deadline reminders and winner broadcasts.</p>
+    <p class="body-text body-text--light">Commissioned to build a tournament platform for Gala's branded Fantasy Premier League challenge: automated overall, weekly, and monthly leaderboards computed live from the public FPL API, with real cash prizes attached to the standings — so correctness and freshness weren't optional. Originally built on Node.js and deployed to Render; later rebuilt in PHP 8.1 to run on the client's existing cPanel shared hosting, which had no Node support. Backed by MySQL, with Google OAuth accounts, encrypted bank-detail storage for payouts, Web Push notifications, and cron-driven automation for deadline reminders and winner broadcasts.</p>
 
     <ul class="bullet-list bullet-list--light">
       <li>Three daily mini-games (trivia, guess-the-player, word match) with one counted attempt per day, enforced at the database level</li>
@@ -214,6 +222,14 @@
         <span class="decision-card__num">03</span>
         <p>Expensive stats are sampled, not exhaustive. "Most Captained" and "Chips Played" are computed from the top 100 managers by rank, not the full ~1,000-member league — clearly labeled as a sample in the UI to keep load reasonable on FPL's public API.</p>
       </div>
+    </div>
+
+    <div class="photo-strip photo-strip--dark">
+      <figure class="photo photo--r1"><img src="assets/images/gala/standings.webp" alt="Gala FPL Challenge standings page" loading="lazy"><figcaption>STANDINGS</figcaption></figure>
+      <figure class="photo photo--r2"><img src="assets/images/gala/manager-profile.webp" alt="Gala FPL Challenge manager profile page" loading="lazy"><figcaption>MANAGER-PROFILE</figcaption></figure>
+      <figure class="photo photo--r3"><img src="assets/images/gala/hall-of-fame.webp" alt="Gala FPL Challenge hall of fame page" loading="lazy"><figcaption>HALL-OF-FAME</figcaption></figure>
+      <figure class="photo photo--r1"><img src="assets/images/gala/sharecard-winner.webp" alt="Gala FPL Challenge weekly winner share card" loading="lazy"><figcaption>WINNER-CARD</figcaption></figure>
+      <figure class="photo photo--r2"><img src="assets/images/gala/sharecard-top10.webp" alt="Gala FPL Challenge top 10 share card" loading="lazy"><figcaption>TOP10-CARD</figcaption></figure>
     </div>
   </section>
 
@@ -242,23 +258,33 @@
       </div>
     </div>
 
-    <!-- Woverico + TBT -->
-    <div class="ai-two-col">
-      <div class="feature-card feature-card--lime">
-        <h3>WOVERICO</h3>
-        <p>An export pipeline that turns HTML/CSS motion graphics into finished 1080×1920 portrait MP4s, ready for TikTok, Reels, Shorts, and Snapchat — driven by Playwright and ffmpeg.</p>
+    <!-- WappyTales + Woverico + TBT -->
+    <div class="ai-three-col">
+      <div class="feature-card">
+        <h3>WAPPYTALES — A SELF-HOSTED AI FILM PIPELINE</h3>
+        <p>A more experimental production engine for original series ("Ashborn", "Lagos 2047") using ElevenLabs voice, fal.ai, and a self-hosted Stable Diffusion/Wan 2.1 video model run on free Kaggle GPU notebooks, tunneled through Cloudflare.</p>
         <div class="tag-list">
+          <span class="tag">ElevenLabs</span>
+          <span class="tag">ComfyUI / Wan 2.1</span>
+          <span class="tag">Kaggle GPU</span>
+        </div>
+      </div>
+      <div class="feature-card feature-card--lime">
+        <h3>WOVERICO — FACELESS SHORT-FORM VIDEO</h3>
+        <p>A pipeline that turns scripted topics (news, crime, sports, movies) into narrated, captioned, finished 1080×1920 portrait MP4s — Piper text-to-speech plus Playwright and ffmpeg for the HTML-to-video export.</p>
+        <div class="tag-list">
+          <span class="tag">Piper TTS</span>
           <span class="tag">Playwright</span>
           <span class="tag">ffmpeg</span>
         </div>
       </div>
       <div class="feature-card feature-card--pink">
-        <h3>TBT</h3>
-        <p>A batch video pipeline combining Piper text-to-speech, auto-generated captions, and thumbnail generation — used to produce a real short-form series across topics like productivity, cancel culture, and attachment styles.</p>
+        <h3>TBT — SHORT-FORM VIDEO SERIES</h3>
+        <p>A batch video pipeline combining Piper text-to-speech, word-level auto-captions (faster-whisper), and thumbnail generation — used to produce a real short-form series across topics like productivity, cancel culture, and attachment styles.</p>
         <div class="photo-strip photo-strip--wide">
-          <figure class="photo photo--r1"><img src="assets/images/tbt/ep1-passion.webp" alt="TBT episode — passion" loading="lazy"><figcaption>EP1 — PASSION</figcaption></figure>
-          <figure class="photo photo--r3"><img src="assets/images/tbt/ep2-trophies.webp" alt="TBT episode — trophies" loading="lazy"><figcaption>EP2 — TROPHIES</figcaption></figure>
-          <figure class="photo photo--r2"><img src="assets/images/tbt/ep6-attachment.webp" alt="TBT episode — attachment styles" loading="lazy"><figcaption>EP6 — ATTACHMENT</figcaption></figure>
+          <figure class="photo photo--r1"><img src="assets/images/tbt/ep1-passion.webp" alt="TBT episode thumbnail — passion" loading="lazy"><figcaption>PASSION</figcaption></figure>
+          <figure class="photo photo--r3"><img src="assets/images/tbt/ep2-trophies.webp" alt="TBT episode thumbnail — trophies" loading="lazy"><figcaption>TROPHIES</figcaption></figure>
+          <figure class="photo photo--r2"><img src="assets/images/tbt/ep3-cancel-culture.webp" alt="TBT episode thumbnail — cancel culture" loading="lazy"><figcaption>CANCEL CULTURE</figcaption></figure>
         </div>
       </div>
     </div>
@@ -306,39 +332,39 @@
     </div>
     <div class="skills-grid">
       <div class="skill-col">
-        <h3>FRONTEND</h3>
+        <h3>BACKEND &amp; DATA</h3>
         <ul>
-          <li>JavaScript / Node.js</li>
-          <li>React + Vite</li>
-          <li>Tailwind CSS</li>
+          <li>Python (Django, DRF, Channels)</li>
+          <li>PHP</li>
+          <li>PostgreSQL / MySQL</li>
+          <li>Redis</li>
+        </ul>
+      </div>
+      <div class="skill-col">
+        <h3>REAL-TIME &amp; FRONTEND</h3>
+        <ul>
+          <li>JavaScript, React + Vite + Tailwind</li>
           <li>Three.js / WebGL</li>
+          <li>WebSockets</li>
+          <li>WebRTC</li>
         </ul>
       </div>
       <div class="skill-col">
-        <h3>BACKEND</h3>
+        <h3>PLATFORM &amp; PAYMENTS</h3>
         <ul>
-          <li>PHP 8</li>
-          <li>MySQL</li>
-          <li>REST API design</li>
-          <li>Cron automation</li>
-        </ul>
-      </div>
-      <div class="skill-col">
-        <h3>PLATFORM</h3>
-        <ul>
-          <li>OAuth (Google, Discord, GitHub)</li>
+          <li>OAuth (Google, Discord, GitHub, Twitter, TikTok)</li>
           <li>Web Push / PWA</li>
           <li>Capacitor (Android)</li>
-          <li>Payments (Paystack)</li>
+          <li>Flutterwave</li>
         </ul>
       </div>
       <div class="skill-col">
         <h3>AI &amp; MEDIA</h3>
         <ul>
-          <li>Google Gemini Veo</li>
+          <li>Gemini Veo, ElevenLabs, ComfyUI</li>
           <li>Cloudinary</li>
           <li>ffmpeg / Playwright pipelines</li>
-          <li>Python</li>
+          <li>Piper TTS</li>
         </ul>
       </div>
     </div>
@@ -362,5 +388,13 @@
 </footer>
 
 <script src="brutalist.js"></script>
+
+<nav class="variant-switch" aria-label="Design variants">
+  <a href="index.html">Glassmorphism</a>
+  <a href="terminal.html">Terminal</a>
+  <a href="swiss.html">Swiss</a>
+  <a href="brutalist.html">Brutalist</a>
+</nav>
+<script src="variant-nav.js"></script>
 </body>
 </html>

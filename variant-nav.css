@@ -1,6 +1,6 @@
 /* Shared floating variant switcher — deliberately neutral, sits outside
    each page's own design system so it reads consistently on every variant. */
-body { padding-bottom: 84px; }
+body { padding-bottom: 120px; }
 
 .variant-switch {
   position: fixed;
