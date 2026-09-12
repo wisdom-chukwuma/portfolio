@@ -420,6 +420,7 @@ a {
   background: var(--paper-2);
 }
 .section--dark .plate img { border-color: var(--paper-on-dark-30); }
+.section--dark .plate figcaption { color: var(--paper-on-dark-70); }
 .plate figcaption {
   font-family: var(--mono);
   font-size: 0.68rem;

@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="variant-nav.css">
 </head>
 <body>
 
@@ -189,16 +190,17 @@
     <div class="wrap">
       <div class="section-head reveal">
         <div class="eyebrow">Client work</div>
-        <h2>Freelance: a real-money leaderboard platform</h2>
-        <p>Built and shipped for a private client. Details of scope and engineering decisions below — client identity withheld by agreement.</p>
+        <h2>Freelance: Gala FPL Challenge</h2>
+        <p>Built and shipped for Gala, the Nigerian snack brand — a real-money fantasy football leaderboard, live at gala-fpl.com.ng.</p>
       </div>
 
       <div class="client-case reveal">
         <div>
-          <span class="confidential-badge">Client identity withheld</span>
+          <span class="flagship-badge" style="margin-bottom:18px;">● Live — gala-fpl.com.ng</span>
           <h3>Season-long fantasy football leaderboard, ~1,000 entrants, real cash prizes</h3>
-          <p>Commissioned to build a tournament platform for a branded Fantasy Premier League challenge: automated overall, weekly, and monthly leaderboards computed live from the public FPL API, with real cash prizes attached to the standings — so correctness and freshness weren't optional.</p>
+          <p>Commissioned to build a tournament platform for Gala's branded Fantasy Premier League challenge: automated overall, weekly, and monthly leaderboards computed live from the public FPL API, with real cash prizes attached to the standings — so correctness and freshness weren't optional.</p>
           <p>Originally built on Node.js and deployed to Render; later rebuilt in PHP 8.1 to run on the client's existing cPanel shared hosting, which had no Node support. Backed by MySQL, with Google OAuth accounts, encrypted bank-detail storage for payouts, Web Push notifications, and cron-driven automation for deadline reminders and winner broadcasts.</p>
+          <a href="https://gala-fpl.com.ng" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 18px;font-size:13.5px;margin-bottom:20px;display:inline-flex;">Visit gala-fpl.com.ng →</a>
           <ul class="client-feat-list">
             <li>Three daily mini-games (trivia, guess-the-player, word match) with one counted attempt per day, enforced at the database level</li>
             <li>Shareable result cards, a full PWA shell, and an admin-only payout tracker</li>
@@ -222,6 +224,14 @@
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="shot-strip" style="padding:0;margin-top:8px;grid-template-columns:repeat(5,1fr);">
+        <div class="shot"><img src="assets/images/gala/standings.webp" alt="Gala FPL Challenge standings page" loading="lazy"></div>
+        <div class="shot"><img src="assets/images/gala/manager-profile.webp" alt="Gala FPL Challenge manager profile page" loading="lazy"></div>
+        <div class="shot"><img src="assets/images/gala/hall-of-fame.webp" alt="Gala FPL Challenge hall of fame page" loading="lazy"></div>
+        <div class="shot"><img src="assets/images/gala/sharecard-winner.webp" alt="Gala FPL Challenge weekly winner share card" loading="lazy"></div>
+        <div class="shot"><img src="assets/images/gala/sharecard-top10.webp" alt="Gala FPL Challenge top 10 share card" loading="lazy"></div>
       </div>
     </div>
   </section>
@@ -361,6 +371,14 @@
   </div>
 </footer>
 
+<nav class="variant-switch" aria-label="Design variants">
+  <a href="index.html">Default</a>
+  <a href="terminal.html">Terminal</a>
+  <a href="swiss.html">Swiss</a>
+  <a href="brutalist.html">Brutalist</a>
+</nav>
+
 <script src="script.js"></script>
+<script src="variant-nav.js"></script>
 </body>
 </html>

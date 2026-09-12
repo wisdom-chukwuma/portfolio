@@ -9,6 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="swiss.css">
+<link rel="stylesheet" href="variant-nav.css">
 </head>
 <body>
 
@@ -184,21 +185,27 @@
     <div class="section-head">
       <span class="section-num">03</span>
       <h2 class="section-title">Client Work</h2>
-      <span class="confidential-tag">Client — identity withheld</span>
+      <a class="live-tag" href="https://gala-fpl.com.ng" target="_blank" rel="noopener">● Live at gala-fpl.com.ng ↗</a>
     </div>
 
     <div class="client-body">
-      <h3 class="editorial-head">Season-long fantasy football leaderboard, ~1,000 entrants, real cash prizes</h3>
-      <p class="body-copy">Commissioned to build a tournament platform for a branded Fantasy Premier League challenge: automated overall, weekly, and monthly leaderboards computed live from the public FPL API, with real cash prizes attached to the standings — so correctness and freshness weren't optional. Originally built on Node.js and deployed to Render; later rebuilt in PHP&nbsp;8.1 to run on the client's existing cPanel shared hosting, which had no Node support. Backed by MySQL, with Google OAuth accounts, encrypted bank-detail storage for payouts, Web Push notifications, and cron-driven automation for deadline reminders and winner broadcasts.</p>
+      <h3 class="editorial-head">Gala FPL Challenge — season-long fantasy football leaderboard, ~1,000 entrants, real cash prizes</h3>
+      <p class="body-copy">Commissioned to build a tournament platform for Gala's branded Fantasy Premier League challenge: automated overall, weekly, and monthly leaderboards computed live from the public FPL API, with real cash prizes attached to the standings — so correctness and freshness weren't optional. Originally built on Node.js and deployed to Render; later rebuilt in PHP&nbsp;8.1 to run on the client's existing cPanel shared hosting, which had no Node support. Backed by MySQL, with Google OAuth accounts, encrypted bank-detail storage for payouts, Web Push notifications, and cron-driven automation for deadline reminders and winner broadcasts.</p>
 
       <ul class="feature-bullets">
         <li>Three daily mini-games (trivia, guess-the-player, word match) with one counted attempt per day, enforced at the database level</li>
         <li>Shareable result cards, a full PWA shell, and an admin-only payout tracker</li>
         <li>Rank-movement indicators and tiebreak logic (captain points → vice-captain points → season standing) applied only to the small cluster of entries actually tied around a paid rank</li>
       </ul>
-
-      <p class="note">No client name, brand, or screenshots are shown here — withheld at the client's request for confidentiality.</p>
     </div>
+
+    <figure class="plate-grid plate-grid--phone" aria-label="Gala FPL Challenge screenshots" style="margin-top:8px;">
+      <div class="plate"><img src="assets/images/gala/standings.webp" alt="Gala FPL Challenge standings page" loading="lazy"><figcaption><span>01</span> Standings</figcaption></div>
+      <div class="plate"><img src="assets/images/gala/manager-profile.webp" alt="Gala FPL Challenge manager profile page" loading="lazy"><figcaption><span>02</span> Manager profile</figcaption></div>
+      <div class="plate"><img src="assets/images/gala/hall-of-fame.webp" alt="Gala FPL Challenge hall of fame page" loading="lazy"><figcaption><span>03</span> Hall of fame</figcaption></div>
+      <div class="plate"><img src="assets/images/gala/sharecard-winner.webp" alt="Gala FPL Challenge weekly winner share card" loading="lazy"><figcaption><span>04</span> Winner card</figcaption></div>
+      <div class="plate"><img src="assets/images/gala/sharecard-top10.webp" alt="Gala FPL Challenge top 10 share card" loading="lazy"><figcaption><span>05</span> Top 10 card</figcaption></div>
+    </figure>
 
     <div class="rule rule--light"></div>
 
@@ -329,6 +336,14 @@
   </div>
 </footer>
 
+<nav class="variant-switch" aria-label="Design variants">
+  <a href="index.html">Default</a>
+  <a href="terminal.html">Terminal</a>
+  <a href="swiss.html">Swiss</a>
+  <a href="brutalist.html">Brutalist</a>
+</nav>
+
 <script src="swiss.js"></script>
+<script src="variant-nav.js"></script>
 </body>
 </html>
