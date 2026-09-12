@@ -60,11 +60,11 @@
       </div>
       <div class="hero-visual reveal in">
         <div class="cube-stage">
-          <div class="cube-face">WISCOT</div>
-          <div class="cube-face">RENTNEST</div>
-          <div class="cube-face">STUDYPATH</div>
+          <div class="cube-face">DJANGO</div>
+          <div class="cube-face">WEBSOCKETS</div>
           <div class="cube-face">THREE.JS</div>
-          <div class="cube-face">NODE / PHP</div>
+          <div class="cube-face">POSTGRES</div>
+          <div class="cube-face">REACT</div>
           <div class="cube-face">GEMINI VEO</div>
         </div>
       </div>
@@ -78,17 +78,18 @@
         <div class="flagship-top">
           <div>
             <span class="flagship-badge">● Flagship product — live</span>
-            <h3>Wiscot — a social platform with its own wallet, chat, and 3D games arcade</h3>
-            <p class="flagship-desc">Wiscot is a full platform built from scratch: a "Cot Bank" wallet and mining/rewards system, referrals, real-time chat, leaderboards, OAuth login via Discord and GitHub, transactional email, and a PWA shell that installs like a native app. Shipped to both web and Android (wrapped with Capacitor).</p>
+            <h3>Wiscot — a real-time social platform with its own wallet, WebRTC calls, and a 3D games arcade</h3>
+            <p class="flagship-desc">Wiscot is a full platform built on Django: a "Cot Bank" wallet backed by real Flutterwave payments, real-time chat and eight multiplayer games running over WebSockets (Django Channels + Redis), WebRTC voice/video calls through a self-hosted TURN server, leaderboards, referrals, and OAuth login via Discord, GitHub, Twitter, and TikTok. Shipped to both web and Android (wrapped with Capacitor).</p>
             <div class="flagship-links">
               <a href="https://wiscot.xyz" target="_blank" rel="noopener" class="btn btn-primary" style="padding:10px 18px;font-size:13.5px;">Visit wiscot.xyz →</a>
             </div>
             <div class="tag-row">
-              <span class="tag">Node.js</span>
+              <span class="tag">Django / DRF</span>
+              <span class="tag">Channels / WebSockets</span>
+              <span class="tag">PostgreSQL + Redis</span>
               <span class="tag">Three.js / WebGL</span>
-              <span class="tag">PHP</span>
-              <span class="tag">PWA</span>
-              <span class="tag">Discord &amp; GitHub OAuth</span>
+              <span class="tag">WebRTC</span>
+              <span class="tag">PHP (auth layer)</span>
               <span class="tag">Capacitor / Android</span>
             </div>
           </div>
@@ -96,16 +97,20 @@
 
         <div class="flagship-feats">
           <div class="flagship-feat">
-            <h4>3D games arcade</h4>
-            <p>A three.js-powered 3D lobby leading into eight built-in games — chess, checkers, dash, maze runner, quiz, shadow boxing, drop zone, eight ball.</p>
+            <h4>Real-time over WebSockets</h4>
+            <p>Django Channels + Redis power live chat, presence, and eight real-time multiplayer games, with Gunicorn and Daphne behind Nginx handling HTTP and WebSocket traffic side by side.</p>
           </div>
           <div class="flagship-feat">
-            <h4>Cot Bank &amp; rewards</h4>
-            <p>A wallet system with mining-style earning, a leaderboard, referral rewards, and account comparison — the platform's core engagement loop.</p>
+            <h4>3D games arcade + an AI opponent</h4>
+            <p>A three.js-powered 3D lobby leading into chess, checkers, dash, maze runner, quiz, shadow boxing, drop zone, and eight ball — plus a bot opponent ("COTY AI") for solo practice matches.</p>
           </div>
           <div class="flagship-feat">
-            <h4>Real product infrastructure</h4>
-            <p>Transactional email (security alerts, payouts, referrals), OTP verification, a service worker for offline/installable use, and its own deploy pipeline.</p>
+            <h4>WebRTC voice &amp; video calls</h4>
+            <p>In-chat calling runs over a self-hosted Coturn TURN server, signaled through the same Channels/Redis layer as the rest of the platform's real-time features.</p>
+          </div>
+          <div class="flagship-feat">
+            <h4>Cot Bank, backed by real payments</h4>
+            <p>A wallet system with Flutterwave-powered multi-currency deposits, mining-style earning, a leaderboard, and referral rewards — the platform's core engagement loop, with automated NSFW moderation (NudeNet + OpenCV) on user-generated content.</p>
           </div>
         </div>
 
@@ -139,7 +144,7 @@
           </div>
           <div class="product-body">
             <h3>RentNest</h3>
-            <span class="product-status">In development</span>
+            <span class="product-status">In development · independent, Nigeria-focused — unrelated to the UK company of the same name</span>
             <p>A property rental app for the Nigerian market — verified listings across Lekki, Victoria Island, Ikoyi and more, map-based search, in-app landlord chat, inspection scheduling, digital rental applications, and lease preview. Full onboarding, search, application, and messaging flow designed as a real product, not a demo.</p>
             <div class="tag-row">
               <span class="tag">React</span>
@@ -153,8 +158,8 @@
 
         <div class="product-card reveal">
           <div class="studypath-mock">
-            <div class="sp-pill">⭐ <b>2,450</b> XP</div>
-            <div class="sp-pill">🔥 <b>18</b> day streak</div>
+            <div class="sp-pill"><b>2,450</b> XP</div>
+            <div class="sp-pill"><b>18</b> day streak</div>
             <div class="sp-path">
               <span class="sp-node done">1</span><span class="sp-line"></span>
               <span class="sp-node done">2</span><span class="sp-line"></span>
@@ -166,10 +171,10 @@
           <div class="product-body" style="padding-top:22px;">
             <h3>StudyPath</h3>
             <span class="product-status live">● Live — bu-study-path.netlify.app</span>
-            <p>A gamified study platform built for university coursework: XP points, day streaks, and a Duolingo-style chapter progression map. Course material is processed through a data-extraction pipeline into structured chapters and practice questions, so students move through a real syllabus instead of a flat PDF.</p>
+            <p>A gamified study platform built for university coursework: XP points, day streaks, and a Duolingo-style chapter progression map. A Python script parses course slide decks (.pptx) into structured chapters and practice questions, so students move through a real syllabus instead of a flat slide deck.</p>
             <div class="tag-row">
               <span class="tag">JavaScript</span>
-              <span class="tag">Data extraction pipeline</span>
+              <span class="tag">Python (.pptx parsing)</span>
               <span class="tag">Gamified UX</span>
             </div>
             <a class="product-link" href="https://bu-study-path.netlify.app" target="_blank" rel="noopener">Visit StudyPath →</a>
@@ -190,7 +195,7 @@
 
       <div class="client-case reveal">
         <div>
-          <span class="confidential-badge">🔒 Client identity withheld</span>
+          <span class="confidential-badge">Client identity withheld</span>
           <h3>Season-long fantasy football leaderboard, ~1,000 entrants, real cash prizes</h3>
           <p>Commissioned to build a tournament platform for a branded Fantasy Premier League challenge: automated overall, weekly, and monthly leaderboards computed live from the public FPL API, with real cash prizes attached to the standings — so correctness and freshness weren't optional.</p>
           <p>Originally built on Node.js and deployed to Render; later rebuilt in PHP 8.1 to run on the client's existing cPanel shared hosting, which had no Node support. Backed by MySQL, with Google OAuth accounts, encrypted bank-detail storage for payouts, Web Push notifications, and cron-driven automation for deadline reminders and winner broadcasts.</p>
@@ -241,17 +246,22 @@
 
       <div class="ai-tools">
         <div class="tool-card">
-          <h4>🎬 Woverico</h4>
-          <p>An export pipeline that turns HTML/CSS motion graphics into finished 1080×1920 portrait MP4s, ready for TikTok, Reels, Shorts, and Snapchat — driven by Playwright and ffmpeg.</p>
-          <div class="tag-row"><span class="tag">Playwright</span><span class="tag">ffmpeg</span></div>
+          <h4>WappyTales — a self-hosted AI film pipeline</h4>
+          <p>A more experimental production engine for original series ("Ashborn", "Lagos 2047") using ElevenLabs voice, fal.ai, and a self-hosted Stable Diffusion/Wan 2.1 video model run on free Kaggle GPU notebooks, tunneled through Cloudflare.</p>
+          <div class="tag-row"><span class="tag">ElevenLabs</span><span class="tag">ComfyUI / Wan 2.1</span><span class="tag">Kaggle GPU</span></div>
         </div>
         <div class="tool-card">
-          <h4>📹 TBT — short-form video series</h4>
-          <p>A batch video pipeline combining Piper text-to-speech, auto-generated captions, and thumbnail generation — used to produce a real short-form series across topics like productivity, cancel culture, and attachment styles.</p>
+          <h4>Woverico — faceless short-form video</h4>
+          <p>A pipeline that turns scripted topics (news, crime, sports, movies) into narrated, captioned, finished 1080×1920 portrait MP4s — Piper text-to-speech plus Playwright and ffmpeg for the HTML-to-video export.</p>
+          <div class="tag-row"><span class="tag">Piper TTS</span><span class="tag">Playwright</span><span class="tag">ffmpeg</span></div>
+        </div>
+        <div class="tool-card">
+          <h4>TBT — short-form video series</h4>
+          <p>A batch video pipeline combining Piper text-to-speech, word-level auto-captions (faster-whisper), and thumbnail generation — used to produce a real short-form series across topics like productivity, cancel culture, and attachment styles.</p>
           <div class="tbt-thumbs">
             <img src="assets/images/tbt/ep1-passion.webp" alt="TBT episode thumbnail — passion" loading="lazy">
             <img src="assets/images/tbt/ep2-trophies.webp" alt="TBT episode thumbnail — trophies" loading="lazy">
-            <img src="assets/images/tbt/ep6-attachment.webp" alt="TBT episode thumbnail — attachment styles" loading="lazy">
+            <img src="assets/images/tbt/ep3-cancel-culture.webp" alt="TBT episode thumbnail — cancel culture" loading="lazy">
           </div>
         </div>
       </div>
@@ -304,20 +314,20 @@
       </div>
       <div class="skills-grid reveal">
         <div class="skill-group">
-          <h4>Frontend</h4>
-          <ul><li>JavaScript / Node.js</li><li>React + Vite</li><li>Tailwind CSS</li><li>Three.js / WebGL</li></ul>
+          <h4>Backend &amp; data</h4>
+          <ul><li>Python (Django, DRF, Channels)</li><li>PHP</li><li>PostgreSQL / MySQL</li><li>Redis</li></ul>
         </div>
         <div class="skill-group">
-          <h4>Backend</h4>
-          <ul><li>PHP 8</li><li>MySQL</li><li>REST API design</li><li>Cron automation</li></ul>
+          <h4>Real-time &amp; frontend</h4>
+          <ul><li>JavaScript, React + Vite + Tailwind</li><li>Three.js / WebGL</li><li>WebSockets</li><li>WebRTC</li></ul>
         </div>
         <div class="skill-group">
-          <h4>Platform</h4>
-          <ul><li>OAuth (Google, Discord, GitHub)</li><li>Web Push / PWA</li><li>Capacitor (Android)</li><li>Payments (Paystack)</li></ul>
+          <h4>Platform &amp; payments</h4>
+          <ul><li>OAuth (Google, Discord, GitHub, Twitter, TikTok)</li><li>Web Push / PWA</li><li>Capacitor (Android)</li><li>Flutterwave</li></ul>
         </div>
         <div class="skill-group">
           <h4>AI &amp; media</h4>
-          <ul><li>Google Gemini Veo</li><li>Cloudinary</li><li>ffmpeg / Playwright pipelines</li><li>Python</li></ul>
+          <ul><li>Gemini Veo, ElevenLabs, ComfyUI</li><li>Cloudinary</li><li>ffmpeg / Playwright pipelines</li><li>Piper TTS</li></ul>
         </div>
       </div>
     </div>
