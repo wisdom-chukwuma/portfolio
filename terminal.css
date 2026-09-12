@@ -941,3 +941,43 @@ section {
   .shot-strip { grid-template-columns: repeat(2, 1fr); }
   .rentnest-strip { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ---------- interactive hero terminal ---------- */
+.hero-interactive {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px dashed var(--border);
+}
+.term-output {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  max-height: 240px;
+  overflow-y: auto;
+  margin-bottom: 8px;
+  font-size: 13.5px;
+  line-height: 1.5;
+}
+.term-output div { white-space: pre-wrap; word-break: break-word; }
+.term-output .out-cmd { color: var(--fg); }
+.term-output .out-cmd::before { content: "wisdom@dev:~$ "; color: var(--accent); }
+.term-output .out-body { color: var(--fg-dim); padding-left: 2px; }
+.term-output .out-error { color: #ff6b6b; }
+.term-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.term-input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--fg);
+  font: inherit;
+  font-family: var(--mono);
+  caret-color: var(--accent);
+}
+.term-input::placeholder { color: var(--fg-dimmer); }
