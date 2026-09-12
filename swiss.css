@@ -282,6 +282,98 @@ a {
 }
 
 /* ===========================================================
+   INTERACTIVE 3D DEMO STRIP (wireframe, drag to rotate)
+   =========================================================== */
+.wire-strip {
+  border-top: var(--rule);
+  border-bottom: var(--rule);
+  padding: clamp(28px, 5vw, 44px) var(--gutter);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(28px, 5vw, 56px);
+}
+.wire-strip-scene {
+  flex: 0 0 auto;
+  perspective: 700px;
+  width: 110px;
+  height: 110px;
+}
+.wire-strip-stage {
+  width: 110px;
+  height: 110px;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: grab;
+  touch-action: none;
+  transform: rotateX(-18deg) rotateY(0deg);
+}
+.wire-strip-stage.dragging { cursor: grabbing; }
+.wire-face {
+  position: absolute;
+  width: 110px;
+  height: 110px;
+  border: 1.5px solid var(--ink);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6px;
+}
+.wire-face span {
+  font-family: var(--mono);
+  font-size: 0.52rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--ink-70);
+  line-height: 1.3;
+}
+.wire-face--front { transform: translateZ(55px); }
+.wire-face--front span { color: var(--red); }
+.wire-face--back { transform: rotateY(180deg) translateZ(55px); }
+.wire-face--right { transform: rotateY(90deg) translateZ(55px); }
+.wire-face--left { transform: rotateY(-90deg) translateZ(55px); }
+.wire-face--top { transform: rotateX(90deg) translateZ(55px); }
+.wire-face--bottom { transform: rotateX(-90deg) translateZ(55px); }
+
+.wire-strip-text {
+  flex: 1 1 260px;
+  min-width: 0;
+}
+.wire-strip-caption {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+.wire-strip-caption span {
+  color: var(--red);
+  margin-right: 8px;
+}
+.wire-strip-sub {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  color: var(--ink-70);
+  margin: 0;
+  max-width: 48ch;
+}
+
+@media (max-width: 480px) {
+  .wire-strip { gap: 20px; }
+  .wire-strip-scene, .wire-strip-stage, .wire-face { width: 92px; height: 92px; }
+  .wire-face--front, .wire-face--back { transform: translateZ(46px); }
+  .wire-face--back { transform: rotateY(180deg) translateZ(46px); }
+  .wire-face--right { transform: rotateY(90deg) translateZ(46px); }
+  .wire-face--left { transform: rotateY(-90deg) translateZ(46px); }
+  .wire-face--top { transform: rotateX(90deg) translateZ(46px); }
+  .wire-face--bottom { transform: rotateX(-90deg) translateZ(46px); }
+}
+
+/* ===========================================================
    SECTION SHELL
    =========================================================== */
 .section {
