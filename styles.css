@@ -370,7 +370,6 @@ footer{padding:36px 0 50px;}
   .shot-strip{grid-template-columns:repeat(3,1fr);}
   .product-grid{grid-template-columns:1fr;}
   .client-case{grid-template-columns:1fr;padding:28px;}
-  .ai-hero{grid-template-columns:1fr;}
   .ai-tools{grid-template-columns:1fr;}
   .more-grid{grid-template-columns:1fr 1fr;}
   .skills-grid{grid-template-columns:1fr 1fr;}
@@ -380,6 +379,7 @@ footer{padding:36px 0 50px;}
   .wrap,.hero-inner,.nav-inner,.footer-inner{padding-inline:18px;}
   .section-pad{padding:72px 0;}
   .shot-strip{grid-template-columns:repeat(2,1fr);padding:24px 20px 28px;}
+  .ai-hero{grid-template-columns:1fr;}
   .flagship-top{padding:28px 20px 0;}
   .more-grid{grid-template-columns:1fr;}
   .skills-grid{grid-template-columns:1fr;}

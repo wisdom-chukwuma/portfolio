@@ -910,7 +910,6 @@ section {
   .feature-grid { grid-template-columns: 1fr 1fr; }
   .shot-strip { grid-template-columns: repeat(3, 1fr); }
   .rentnest-strip { grid-template-columns: repeat(3, 1fr); }
-  .wappy-grid { grid-template-columns: 1fr; }
   .sub-project-grid { grid-template-columns: 1fr; }
   .more-grid { grid-template-columns: 1fr 1fr; }
   .skills-grid { grid-template-columns: 1fr 1fr; }
@@ -927,6 +926,7 @@ section {
   .shot-strip { grid-template-columns: repeat(2, 1fr); }
   .rentnest-strip { grid-template-columns: repeat(2, 1fr); }
   .tbt-strip { grid-template-columns: 1fr; }
+  .wappy-grid { grid-template-columns: 1fr; }
   .more-grid { grid-template-columns: 1fr; }
   .skills-grid { grid-template-columns: 1fr; }
   .hero-stats { gap: 8px 16px; }
