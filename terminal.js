@@ -81,7 +81,7 @@
         return "backend      Python (Django, DRF, Channels), PHP, PostgreSQL, MySQL, Redis\nrealtime     WebSockets, WebRTC, Three.js / WebGL\nfrontend     JavaScript, React, Vite, Tailwind\nplatform     OAuth, Web Push / PWA, Capacitor, Flutterwave\nai           Gemini Veo, ElevenLabs, ComfyUI, Cloudinary, Piper TTS, ffmpeg pipelines\n\ntype 'cd skills' in the nav above for the full breakdown.";
       },
       projects: function () {
-        return "wiscot        real-time platform — django, channels, three.js — live\nrentnest      property rental app — react, vite — in development\nstudypath     gamified study platform — live\ngala-fpl      client leaderboard — php, mysql — live\nwappydrama    ai drama generator — gemini veo\nwappytales    self-hosted ai film pipeline — comfyui, kaggle gpu\nwoverico      faceless short-form video pipeline\ntbt           short-form video series — piper tts, whisper";
+        return "wiscot             real-time platform — django, channels, three.js — live\nrentnest           property rental app — react, vite — in development\nstudypath          gamified study platform — live\nworship-the-king   church youth-week app — firebase, pwa — live\ngala-fpl           client leaderboard — php, mysql — live\neagle-team         member portal + store — php, mysql — live client\nwappydrama         ai drama generator — gemini veo\nwappytales         self-hosted ai film pipeline — comfyui, kaggle gpu\nwoverico           faceless short-form video pipeline\ntbt                short-form video series — piper tts, whisper";
       },
       ls: function () { return commands.projects(); },
       wiscot: function () { goTo("#wiscot"); return "→ jumping to wiscot.md ..."; },

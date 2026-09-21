@@ -428,6 +428,13 @@ a {
   white-space: nowrap;
 }
 .live-tag { color: var(--red); border-color: var(--red); }
+.live-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  min-width: 0;
+}
+.live-tags .live-tag { max-width: 100%; }
 .status-live { color: var(--red); border-color: var(--red); }
 .status-dev { color: var(--ink-70); }
 
@@ -493,6 +500,13 @@ a {
   .plate-grid { grid-template-columns: repeat(6, 1fr); }
   .plate-grid--phone { grid-template-columns: repeat(5, 1fr); }
 }
+/* three phone screens: 2 columns on phones, then a single row of 3 */
+@media (min-width: 620px) {
+  .plate-grid--trio { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 1000px) {
+  .plate-grid--trio { grid-template-columns: repeat(3, 1fr); max-width: 640px; }
+}
 .plate-grid--wide { grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 640px) {
   .plate-grid--wide { grid-template-columns: repeat(3, 1fr); }
@@ -535,6 +549,14 @@ a {
   margin-bottom: 14px;
 }
 .product-head .editorial-head { margin-bottom: 0; }
+.product-note {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--ink-70);
+  margin: -4px 0 0;
+  max-width: 60ch;
+}
+.product-block .plate-grid { margin-top: 28px; }
 
 /* StudyPath stat block */
 .stat-block {
@@ -603,6 +625,16 @@ a {
    CLIENT WORK
    =========================================================== */
 .client-body { max-width: 900px; }
+.case-label {
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--red);
+  margin: 0 0 12px;
+}
+.client-body + .plate-grid { margin-top: 28px; }
+.section--dark .tag-row li a { color: var(--red); }
 .feature-bullets {
   margin: 22px 0 0;
   padding: 0;

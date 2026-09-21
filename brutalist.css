@@ -396,8 +396,12 @@ h1, h2, h3, h4, p { margin: 0; }
 .photo-strip--phones { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
 .photo-strip--wide { margin-top: 1.2rem; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); }
 .photo-strip--dark { margin-top: 0.5rem; }
+.photo-strip--spaced { margin-top: 2.2rem; }
+.photo-strip--fit { align-items: start; }
 .photo-strip--dark .photo { box-shadow: 6px 6px 0 var(--lime); }
 .photo-strip--dark .photo:hover { box-shadow: 9px 9px 0 var(--lime); }
+/* Paper-white frames sit on the black section: captions must be dark, not inherited paper */
+.photo-strip--dark .photo figcaption { color: var(--black); }
 
 .photo {
   background: var(--white);
@@ -463,6 +467,49 @@ h1, h2, h3, h4, p { margin: 0; }
   text-transform: uppercase;
 }
 
+.event-stamp {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.62rem;
+  letter-spacing: 0.02em;
+  color: var(--black);
+  background: var(--pink);
+  border: var(--border-thin) solid var(--black);
+  box-shadow: 3px 3px 0 var(--black);
+  padding: 0.3rem 0.55rem;
+  transform: rotate(1.5deg);
+  text-transform: uppercase;
+}
+.body-text--tight { margin-top: -0.8rem; font-family: var(--font-mono); font-size: 0.8rem; font-weight: 700; }
+
+/* Worship The King: the four squads */
+.squad-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem 0.8rem;
+  margin-top: 1.6rem;
+}
+.squad-row__label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-right: 0.3rem;
+}
+.squad-chip {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
+  background: var(--white);
+  border: var(--border-thin) solid var(--black);
+  box-shadow: 4px 4px 0 var(--black);
+  padding: 0.3rem 0.7rem;
+}
+.squad-chip--lime { background: var(--lime); }
+.squad-chip--pink { background: var(--pink); }
+.squad-chip--black { background: var(--black); color: var(--lime); }
+
 .studypath-stats {
   display: flex;
   gap: 1.2rem;
@@ -527,7 +574,44 @@ h1, h2, h3, h4, p { margin: 0; }
   transform: rotate(-2deg);
   box-shadow: 4px 4px 0 var(--paper);
 }
+/* Align the stamp with the 1200px content column (the dark section is full-bleed) */
+.section--dark > .live-stamp {
+  display: block;
+  width: fit-content;
+  margin-left: max(0px, calc((100% - 1200px) / 2));
+}
+.section--dark .tag { color: var(--black); }
 .live-stamp:hover { transform: rotate(0deg) translate(-2px, -2px); }
+
+/* Case-study headings + divider between client projects (dark section) */
+.case-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  color: var(--paper);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 0.9rem;
+  margin-bottom: 1rem;
+}
+.case-title--first { margin-top: 0.4rem; }
+.case-title__num {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  background: var(--pink);
+  color: var(--black);
+  border: var(--border-thin) solid var(--black);
+  padding: 0.25rem 0.55rem;
+}
+.case-divider {
+  border: 0;
+  border-top: var(--border-thin) dashed var(--paper);
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  opacity: 0.6;
+}
 
 .bullet-list {
   list-style: none;
@@ -776,7 +860,7 @@ h1, h2, h3, h4, p { margin: 0; }
   .polaroid--left, .polaroid--right { transform: rotate(0deg); }
   .hero__badge { transform: rotate(0deg); }
   .logo-mark { transform: rotate(0deg); }
-  .live-stamp, .disclaimer-stamp { transform: rotate(0deg); }
+  .live-stamp, .disclaimer-stamp, .event-stamp { transform: rotate(0deg); }
   .tag-live { transform: rotate(0deg); }
 }
 
