@@ -1,0 +1,222 @@
+{
+"church/gallery.webp": [
+"#5d226c",
+"#ffffff"
+],
+"church/home.webp": [
+"#210c2f",
+"#ffffff"
+],
+"church/leaderboard.webp": [
+"#5d226c",
+"#ffffff"
+],
+"church/schedule.webp": [
+"#210c2f",
+"#ffffff"
+],
+"eagle/directions.webp": [
+"#068347",
+"#ffffff"
+],
+"eagle/family-tree.webp": [
+"#068347",
+"#ffffff"
+],
+"eagle/home.webp": [
+"#068347",
+"#ffffff"
+],
+"eagle/store.webp": [
+"#068347",
+"#ffffff"
+],
+"gala/account.webp": [
+"#fdf6ed",
+"#111111"
+],
+"gala/compare.webp": [
+"#fdf6ed",
+"#111111"
+],
+"gala/games.webp": [
+"#fdf6ed",
+"#111111"
+],
+"gala/hall-of-fame.webp": [
+"#fdf6ed",
+"#111111"
+],
+"gala/home.webp": [
+"#7c241c",
+"#ffffff"
+],
+"gala/standings.webp": [
+"#fdf6ed",
+"#111111"
+],
+"rentnest/applications.webp": [
+"#f4f6f8",
+"#111111"
+],
+"rentnest/documents.webp": [
+"#f4f6f8",
+"#111111"
+],
+"rentnest/home.webp": [
+"#f4f6f8",
+"#111111"
+],
+"rentnest/inspection-booked.webp": [
+"#f4f6f8",
+"#111111"
+],
+"rentnest/landlord.webp": [
+"#0d8462",
+"#ffffff"
+],
+"rentnest/lease.webp": [
+"#f4f6f8",
+"#111111"
+],
+"rentnest/onboarding.webp": [
+"#49659e",
+"#ffffff"
+],
+"rentnest/property.webp": [
+"#766f66",
+"#ffffff"
+],
+"rentnest/results.webp": [
+"#f4f6f8",
+"#111111"
+],
+"studypath/screen-1.webp": [
+"#f8fefc",
+"#111111"
+],
+"studypath/screen-2.webp": [
+"#f8fefc",
+"#111111"
+],
+"studypath/screen-3.webp": [
+"#f8fefc",
+"#111111"
+],
+"wappydrama/covenant-mark-drive.webp": [
+"#0e0e18",
+"#ffffff"
+],
+"wappydrama/covenant-mark-elder.webp": [
+"#b0a09a",
+"#111111"
+],
+"wappydrama/covenant-mark-night.webp": [
+"#07122f",
+"#ffffff"
+],
+"wappydrama/crowns-burden-court.webp": [
+"#321d12",
+"#ffffff"
+],
+"wappydrama/crowns-burden-letter.webp": [
+"#3a2010",
+"#ffffff"
+],
+"wappydrama/crowns-burden-throne.webp": [
+"#74858f",
+"#ffffff"
+],
+"wappydrama/mother-eagle-podium.webp": [
+"#646869",
+"#ffffff"
+],
+"wappydrama/mother-eagle-store.webp": [
+"#a49587",
+"#111111"
+],
+"wappydrama/poster-covenant-mark.webp": [
+"#2c0302",
+"#ffffff"
+],
+"wappydrama/poster-mother-eagle.webp": [
+"#0c0401",
+"#ffffff"
+],
+"wappydrama/poster-my-husbands-altar.webp": [
+"#050405",
+"#ffffff"
+],
+"wappytales/ashborn-dr-chen.webp": [
+"#000000",
+"#ffffff"
+],
+"wappytales/ashborn-street.webp": [
+"#454551",
+"#ffffff"
+],
+"wappytales/ashborn-warehouse.webp": [
+"#333143",
+"#ffffff"
+],
+"wappytales/lagos2047-city.webp": [
+"#69717e",
+"#ffffff"
+],
+"wappytales/lagos2047-home.webp": [
+"#4b2309",
+"#ffffff"
+],
+"wappytales/lagos2047-street.webp": [
+"#595b6f",
+"#ffffff"
+],
+"wiscot/compare.webp": [
+"#0b0e14",
+"#ffffff"
+],
+"wiscot/cot-bank.webp": [
+"#0b0e14",
+"#ffffff"
+],
+"wiscot/games.webp": [
+"#0b0e14",
+"#ffffff"
+],
+"wiscot/jobs.webp": [
+"#0b0e14",
+"#ffffff"
+],
+"wiscot/leaderboard.webp": [
+"#0b0e14",
+"#ffffff"
+],
+"wiscot/profile.webp": [
+"#0b0e14",
+"#ffffff"
+],
+"wiscot/records.webp": [
+"#0b0e14",
+"#ffffff"
+],
+"wiscot/shop.webp": [
+"#0b0e14",
+"#ffffff"
+],
+"wiscot/xp-tracker.webp": [
+"#0b0e14",
+"#ffffff"
+],
+"woverico/breaking-news.webp": [
+"#0c1a1f",
+"#ffffff"
+],
+"woverico/sports-animated.webp": [
+"#090706",
+"#ffffff"
+],
+"woverico/story-time.webp": [
+"#0d191d",
+"#ffffff"
+]
+}
